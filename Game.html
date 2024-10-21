@@ -1,0 +1,1718 @@
+<!DOCTYPE html>
+<html lang="en" id="server">
+<head>
+    <!-- COMMON TAGS -->
+    <meta charset="utf-8">
+    <title>Termite Empire</title>
+    <!-- Search Engine -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta
+      name="description"
+      content="Create Your Termite Empire by Clicking. A Clicker game to make a termite empire. collect resin for the queen" />
+    <meta name="theme-color" content="Black" />
+    <meta name="keywords" content="Termite Empire, Termite , Termite Empire Clicker, clicker game, termite game, oniwa, penut" />
+    <meta name="author" content="KlienReijiOniwa" />
+<link rel="icon" href=
+"img/icon-game.png" 
+          type="image/x-icon">
+    <meta name="theme-color" content="Black" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- open graph metadata -->
+    <meta property="og:title" content="Termite Empire" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://klienreijioniwa.github.io/BSD/" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/KlienReijiOniwa/BSD/main/SERVER/image/Untitled%20design_20240815_194013_0000.png" />
+    <meta
+      property="og:description"
+      content="BSD is an online tower defense and you can grind here  exps and grind your stragety. and discover easter eggs. and more!" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+</head>
+<page id="container">
+
+<body onoffline="fun()" id="container">
+ 
+
+
+
+       </fieldset>
+      <marquee></marquee>
+          
+     
+
+ 
+ 
+
+<div class="box">
+  
+      
+       
+      
+
+<center>  
+        <figure></figure>
+        <div class="mainGameContent">
+
+          <button>
+    <a href="Game.html" style="color:white;">Fix Music</a>        
+          </button>
+          
+            <figcaption></figcaption>
+         
+            <h2 style="color:brown;"class="ResinAmountDisplay">
+              
+              <img class="currencyicon" src="img/Resin_page_icon.png">:<span class="ResinAmount">0</span> </h2>
+            
+<figure></figure>
+
+	                                                            	<h3 class="WorkerAmountDisplay">
+	                                                            	  <img style="width:35px" src="img/dot2024_1013_2037_04.png">:<span class="WorkerAmount">0</span></h3>
+	                                                            	
+	                                                            	<figure></figure>
+	                                                            	<h1></h1>
+	                                                            	
+
+
+<center>
+	<img style="width:50px;" src="img/Termite_Queen_Sprite.png">	  
+	                                                            	  <button onclick="Resin()">Groom Queen</button></center>
+  <style>
+body {font-family:Arial, Helvetica, sans-serif;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.currencyicon {
+  width: 20px;
+}
+/* Set a style for all buttons */
+button {
+  background-color: #5C4033;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+
+
+
+
+
+
+<figure></figure>
+
+	       
+		          
+        <div id="buttonSettings9">    <b class="WorkerAmountDisplay">
+
+        <img class="currencyicon" src="img/Termite_Worker_Sprite.png">:
+		<span class="bSecRateNumber">0</span> 
+        </b></div>
+		    <figure></figure>
+		   
+
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Full-width input fields */
+
+/* Set a style for all buttons */
+#obutton {
+  background-color: #C19A6B;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 1000px;
+}
+
+#obutton:hover {
+  opacity: 0.8;
+border-radius: 1000px;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+
+
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto; " id="obutton">📬 GLOBAL MAILS</button>
+
+<div id="id01" class="modal">
+  <form class="modal-content animate" >
+	<h2>0 MAILS:</h2>
+<fieldset>
+  <h1>Welcome</h1>
+  ,
+  <kbd>Ooctober 17 2024</kbd>
+  <p>10 Newbie Has Arrived Welcome!</p>
+</fieldset>
+</div>
+  
+</div>
+</form>
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Full-width input fields */
+
+/* Set a style for all buttons */
+#obutton {
+  background-color: #C19A6B;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 1000px;
+}
+
+#obutton:hover {
+  opacity: 0.8;
+border-radius: 1000px;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn1 {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+
+
+.containerq {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal1 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content1 {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close1 {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close1:hover,
+.close1:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animateq {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn1 {
+     width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+
+
+
+
+    
+<body onoffline="fun()">
+ 
+
+
+
+
+     
+
+       </fieldset>
+      <marquee></marquee>
+          
+     
+<script>
+ 
+</script>
+
+
+
+
+		
+                </center>   
+	    <style>
+ 
+            </style>
+        
+    <script src="lib/jquery-3.3.1.min.js"></script>
+    <script async src="scripts/app.js" type="text/javascript"></script>
+</body>
+        
+</html>
+
+	
+	
+	
+	
+
+	
+ 
+ <fieldset class="box-led"><legend><span>UPGRADES</span></legend>
+
+                
+
+	 <fieldset class="SHOP">
+	   <h1> <img style="width:40px;"src="img/dot2024_1013_2037_04.png">Egg Incubator I</h1>
+	   
+                      <p>This Only Incubate small Amount of Eggs. this is only for Newbies</p>
+	  
+ <li class="purchaseItem" id="item_TermiteWorker" data-price="0.00000200" data-bits-per-sec="0.00000001">
+
+
+                   LVL: <span>0</span>
+                    <p class="itemHeadline">Incubate</p>
+
+<kbd class="itemPrice">0.00000500</kbd> <img style="" class="currencyicon" src="img/Resin_page_icon.png">
+
+                </li>
+            </fieldset>    
+	 <fieldset class="SHOP">
+	   <h1><img style="width:40px;"src="img/dot2024_1013_2011_15.png">RESIN CHAMBER</h1>
+	   
+             
+             <p>Resin Chamber. Store Resins more upgrades more Resin multiplier</p>
+	  
+ <li class="purchaseItem" id="item_ResinChamber" data-price="0.00000050" data-bits-per-sec="0.00000000">
+
+
+                   LVL: <span>0</span>
+                    <p class="itemHeadline">    Upgrade</p>
+
+<kbd class="itemPrice">0.00000050</kbd> <img style="" class="currencyicon" src="img/Resin_page_icon.png">
+
+                </li>
+            </fieldset>    
+ 
+ <figure></figure>
+ 
+	 <fieldset class="SHOP">
+	   <h1> <img style="width:40px;"src="img/dot2024_1013_2037_04.png">Egg Incubator II</h1>
+	   
+            <p>Can Incubate more than 5, it will double per upgrades</p>
+	  
+ <li class="purchaseItem" id="item_5TermiteWorker" data-price="0.00000900" data-bits-per-sec="0.00000005">
+
+
+                   LVL: <span>0</span>
+                    <p class="itemHeadline">Incubate</p>
+
+<kbd class="itemPrice">0.00000900</kbd> <img style="" class="currencyicon" src="img/Resin_page_icon.png">
+
+                </li>
+            </fieldset>    
+     
+     <figure></figure>
+     
+	 <fieldset class="SHOP">
+	   <h1> <img style="width:40px;"src="img/dot2024_1007_0017_31.png">Fungi</h1>
+	   
+            <p>Building Blocks of the termites, uses this to build tunnels even chambers to protect from predators</p>
+	  
+ <li class="purchaseItem" id="item_fungi" data-price="0.00001000" data-bits-per-sec="0.00000000">
+
+
+                   LVL: <span>0</span>
+                    <p class="itemHeadline">    Upgrade</p>
+
+<kbd class="itemPrice">0.00001000</kbd> <img style="" class="currencyicon" src="img/Resin_page_icon.png">
+
+                </li>
+            </fieldset>    
+     
+  <figure></figure>
+       
+	 <fieldset class="SHOP">
+	   <h1> <img style="width:40px;"src="img/dot2024_1014_0100_05.png"></h1>
+	   
+            <p>Store eggs. by upgrading this. your worker can be collect more resin</p>
+	  
+ <li class="purchaseItem" id="item_eggchamber" data-price="0.00003500" data-bits-per-sec="0.00000000">
+
+
+                   LVL: <span>0</span>
+                    <p class="itemHeadline">    Upgrade</p>
+
+<kbd class="itemPrice">0.00003500</kbd> <img style="" class="currencyicon" src="img/Resin_page_icon.png">
+
+                </li>
+            </fieldset>    
+                
+                
+                
+              
+                <figure></figure>
+	 <fieldset class="SHOP">
+	   <h1> <img style="width:40px;"src="img/dot2024_1013_2037_04.png">Incubate Chamber III</h1>
+	   
+            <p>Incubate 10 eggs and get 10 termites 91% of the eggs will die on Acid</p>
+	  
+ <li class="purchaseItem" id="item_10TermiteWorker" data-price="0.00001990" data-bits-per-sec="0.00000007">
+
+
+                   LVL: <span>0</span>
+                    <p class="itemHeadline">Incubate</p>
+
+<kbd class="itemPrice">0.00001990</kbd> <img style="" class="currencyicon" src="img/Resin_page_icon.png">
+
+                </li>
+            </fieldset>    
+     <figure></figure>
+	 <fieldset class="SHOP">
+	   <h1> <img style="width:40px;"src="img/dot2024_1014_0116_17.png">Soilder Incubating Chamber</h1>
+	   
+            <p>Soilder Termite be incubate here, upgrade it to make your soilders more powerful in spiting acids and stragety and this iz where they gonna heal after battle</p>
+	  
+ <li class="purchaseItem" id="item_SoilderChamber" data-price="0.00065400" data-bits-per-sec="0.000000010">
+
+
+                   LVL: <span>0</span>
+                    <p class="itemHeadline">    Upgrade</p>
+
+<kbd class="itemPrice">0.00065400</kbd> <img style="" class="currencyicon" src="img/Resin_page_icon.png">
+
+                </li>
+            </fieldset>    
+	 <fieldset class="SHOP">
+	   <h1> <img style="width:40px;"src="img/dot2024_1013_2037_04.png">Incubate Chamber IV</h1>
+	   
+            <p>Incubate 15 eggs and get 15 termites 85% of the eggs will die on Acid</p>
+	  
+ <li class="purchaseItem" id="item_15TermiteWorker" data-price="0.00009450" data-bits-per-sec="0.000000015">
+
+
+                   LVL: <span>0</span>
+                    <p class="itemHeadline">Incubate</p>
+
+<kbd class="itemPrice">0.00009450</kbd> <img style="" class="currencyicon" src="img/Resin_page_icon.png">
+
+                </li>
+            </fieldset>    
+<figure></figure>
+	 <fieldset class="SHOP">
+	   <h1> <img style="width:40px;"src="img/dot2024_1014_0856_10.png">Creature Chamber</h1>
+	   
+            <p>Creature Can be upgraded by upgrading this and gives 5% attack speed and 7.2% Attack</p>
+	  
+ <li class="purchaseItem" id="item_creaturechamber" data-price="0.00155555" data-bits-per-sec="0.000000013">
+
+
+                   LVL: <span>0</span>
+                    <p class="itemHeadline">    Upgrade</p>
+
+<kbd class="itemPrice">0.00155555</kbd> <img style="" class="currencyicon" src="img/Resin_page_icon.png">
+
+                </li>
+            </fieldset>    
+<figure></figure>
+	 <fieldset class="SHOP">
+	   <h1> <img style="width:40px;"src="img/dot2024_1013_2037_04.png">Incubate Chamber V</h1>
+	   
+            <p>Incubate 20 eggs and get 20 termites 85% of the eggs will die on Acid</p>
+	  
+ <li class="purchaseItem" id="item_15TermiteWorker" data-price="0.00009450" data-bits-per-sec="0.000000015">
+
+
+                   LVL: <span>0</span>
+                    <p class="itemHeadline">Incubate</p>
+
+<kbd class="itemPrice">0.00099450</kbd> <img style="" class="currencyicon" src="img/Resin_page_icon.png">
+
+                </li>
+            </fieldset>   
+	 <fieldset class="SHOP">
+	   <h1> <img style="width:40px;"src="img/dot2024_1015_0959_17.png">Queen's Chamber</h1>
+	   
+            <p>upgradig the Queen Chamber can upgrade your worker to collect more than 1% and T</p>
+	  
+ <li class="purchaseItem" id="item_queenchamber" data-price="0.00006655" data-bits-per-sec="0.000000001">
+
+
+                   LVL: <span>0</span>
+                    <p class="itemHeadline">Incubate</p>
+
+<kbd class="itemPrice">0.00006655</kbd> <img style="" class="currencyicon" src="img/Resin_page_icon.png">
+
+                </li>
+            </fieldset>   
+
+
+  </fieldset>
+  
+<fieldset class="box-led">
+ <label for="">🌳Tree:</label>
+ <p>The Tree This is the home lobby for your Termites and collect resins, and fight creatures. theres new colony will migrate here challenge them for a fight so they will leaved your tree. and make the tree be your kingdom</p>
+
+ 
+  <center>
+   <img style="width:100px;" src="img/Resin_page_icon.png">
+   <h2>Small Resin</h2>
+   
+   <button class="attackbuttom" onclick="CollectSmallResin()">Collect</button>
+   
+  </center>
+<fieldset class="SHOP" hidden="">
+  <h2>Invader:Enemy Termites </h2>
+	  <p>They Are Invading your tree</p>
+	  <kbd>20 Soilder</kbd>
+	  <kbd>1 Creature</kbd>
+	 
+ <li class="attackbuttom">
+
+
+                          
+                    <p class="itemHeadline">ATTACK</p>
+
+
+                </li>
+  
+  <kbd>1 Min Despawn</kbd>
+</fieldset>
+
+<script>
+setTimeout(myFunctionN, 200000)
+setTimeout(myFunction, 100000)
+
+
+function CollectSmallResin() {
+    Resins = Resins + 0.00000010
+
+    // Show the new number on the page
+    if(Resins > 1000000){
+
+      let ResinUnitNumber = Resins.optimizeNumber()
+      $(".ResinAmount").text(ResinUnitNumber)
+
+    }else if(Resins >= 1000){
+      $(".ResinAmount").text(Resins.toFixed(0))
+    }else if(Resins >= 1){
+      $(".ResinAmount").text(Resins.toFixed(2))
+    }else{
+      $(".ResinAmount").text(Resins.toFixed(8))
+    }
+
+    if((Resins * 100000000) < 1000000) {
+      $(".WorkerAmount").text(Math.round((Resins * 100000000)))
+    }else{
+
+      let satoshiUnitNumber = (Resins * 100000000).optimizeNumber()
+      $(".WorkerAmount").text(satoshiUnitNumber)
+    }
+    alert("Collected 10/10 Resins")
+    document.getElementById("collectSFX").play();
+}
+</script>
+</fieldset>
+
+  
+  <style>
+  body {
+    text-shadow:2px 2px 5px ;
+    margin: 1px;
+  }
+  .SHOP {
+    border-radius: 20px;
+    border-color: black;
+    background-color: #E5AA70;
+    color: white;
+    font-style: 1;
+  }
+  .SHOPGold {
+    border-radius: 20px;
+    border-color: black;
+    background-color: #F4FA58;
+    color: white;
+    font-style: 1;
+   
+   
+  }
+  .SHOPLegend {
+    border-radius: 20px;
+    border-color: black;
+    background-color: purple;
+    color: white;
+    font-style: 1;
+   
+   
+  }
+
+    #buttonSettings {
+      width: 200px;
+      height: 30px;
+      background-color: #C19A6B;
+      border-radius: 2px;
+      border-color: white;
+      border:100;
+      color: white;
+    }
+    #buttonSettings9 {
+      text-anchor: a wasuto;
+      background-color: #C19A6B;
+      border-color: white;
+      color: white;
+      align-items: center;
+      margin: 0px;
+      padding: 30px;
+      border: 0px;
+      text-align: center;
+      align-content: center;
+      border-radius: 15px;
+      color: white;
+    }
+  </style> 
+      
+          
+              
+ </fieldset>
+    <script>
+var Resins = 0.00000001
+var ResinRate = 0
+
+// Every item in the game
+// TODO: items should be part of the Game variable
+var items = [
+{
+    "name": "item_TermiteWorker",
+    "price": "0.00000200"
+  },
+{
+    "name": "item_ResinChamber",
+    "price": "0.00000050"
+  },
+  
+{
+    "name": "item_5TermiteWorker",
+    "price": "0.00000900"
+  },
+  
+{
+    "name": "item_fungi",
+    "price": "0.00001000"
+
+  },
+{
+    "name": "item_eggchamber",
+   "price": "0.00003500"
+  },
+  
+  
+{
+    "name": "item_10TermiteWorker",
+    "price": "0.00001990"
+  },
+  
+{
+    "name": "item_SoilderChamber",
+    "price": "0.00065400"
+  },
+  
+{
+    "name": "item_15TermiteWorker",
+    "price": "0.00009450"
+  },
+{
+    "name": "item_creaturechamber",
+    "price": "0.00155555"
+  },
+{
+    "name": "item_queenchamber",
+    "price": "0.00006655"
+  },
+
+
+
+];
+
+
+
+
+// Rate is null (at the beginning)
+var bSec = null;
+
+// If there is no Resins Item in the localStorage, create one.
+// If there is one, do the other thing.
+if(localStorage.getItem("Resins") === null){
+  // Resins are 0
+  Resins = 0
+
+  // Set the localStorage Item for the first time
+  localStorage.setItem("Resins", "0");
+
+  // Write the current amount of Resins on the page
+  $(".ResinAmount").text(Resins.toFixed(8))
+
+}else{
+
+  // Get the amount of Resins and parse them to a float number
+  Resins = parseFloat(localStorage.getItem("Resins"))
+
+  $(".ResinAmount").text("loading...")
+  $(".WorkerAmount").text("loading...")
+
+  let satoshis = Resins * 100000000;
+
+}
+
+/**
+ *
+ *  <-- Setting up the game´s functions -->
+ *
+ */
+
+
+
+// Game variable which will contain any needed major function or needed variables for the game.
+var Game = {}
+
+
+// Every constant variable is saved here
+Game.GameConst = {
+  "priceMultiplier": "1.15",
+  "VERSION": "1.4.0"
+}
+
+Game.units = [
+      "K",
+      "Million",
+      "Billion",
+      "Trillion",
+      "Quadrillion",
+      "Quintillion",
+      "Sextillion",
+      "Septillion",
+      "Octillion",
+      "Nonillion",
+      "Decillion",
+      "Undecillion",
+      "Duodecillion",
+      "Tredecillion",
+      "Quattuordecillion",
+      "Quindecillion",
+      "Sexdecillion",
+      "Septdecillion",
+      "Octodecillion",
+      "Novemdecillion",
+      "Vigintillion",
+      "Unvigintillion",
+      "Duovigintillion",
+      "Trevigintillion",
+      "Quattuorvigintillion",
+      "Quinvigintillion",
+      "Sexvigintillion",
+      "Septvigintillion",
+      "Octovigintillion",
+      "Novemvigintillion",
+      "Trigintillion",
+        "Septillion",
+      "Trigintillion",
+      "Wastetillion",
+      "Good Enough(E+)",
+      "SolarWorld",
+      "TryHard",
+      "Oltra",
+      "Wertillion",
+      "nistillion",
+      "GGAHevigintillion",
+      "Oniintillion",
+      "Lastigintillion",
+      "Cubeigintillion(E+)",
+      "GODDEST",
+      "Hungteversal",
+      "Hardcore",
+      "Hardcore(T1)",
+      "Hardcore(T2)",
+      "Hardcore(T3)",
+      "Zacky",
+      "Zacky(T2)",
+      "Zacky(T3)",
+      "Googol",
+       "Googol(T2)",
+      "Googol(T3)",
+      "Googol(T4)",
+      "GoogolPlex",
+      "GoogolPlex(T2)",
+      "GoogolPlex(T3)",
+      "CrazyHardcore",
+      "CrazyHardcore(T2)",
+      "CrazyHardcore(T3)",
+      "CrazyHardcore(T4)",
+      "CrazyHardcore(T5)",
+      "HardcorePlex",
+       "Hardcoreplex(T2)",
+      "HardcprePlex(T3)",
+      "HardcorePlex(T4)",
+      "HardcorePlex(T5)",
+      "HardcorePlex(T6)",
+      "HardcorePlex(T7)",
+      "HardcorePlex(T8)",
+      "HardcorePlex(T9)",
+      "HardcorePlex(T10)",
+      "Voider(T2)",
+      "Voider(T3)",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+       "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+       "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+     "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max",
+      "Max"
+
+  
+     
+]
+
+
+
+/**
+ * Calculating every price for the items when the game was started (and if there are any items).
+ *
+ * @param element {HTMLElement} - The HTML element of the item on the game page
+ * @param price {Number} - The price of the item, got from the items Object
+ * @param itemAmount {Number} - The current amount of the item, saved in the localStorage
+ */
+
+Game.setPriceAtGameBeginning = function (element, price, itemAmount) {
+
+  // Calculation of the price
+  var multiplier = Game.GameConst.priceMultiplier
+
+  // Calculate the new price -> price * multiplier^itemAmount
+  var calculation = (parseFloat(price) * Math.pow(multiplier, parseInt(itemAmount))).toFixed(8)
+
+  // Showing the actual price
+  element.children()[2].textContent = calculation + ""
+
+  // Set the data-price attribute with the new price
+  element.attr("data-price", calculation.toString())
+
+}
+
+
+
+/**
+ * Function to increase the amount of the item (in the localStorage) with the specific identifier.
+ *
+ * @param id - The identifier of the item (the id from the list element)
+ */
+Game.itemAction = function (id) {
+
+  var item = id
+  var itemAmount = 0;
+
+  if(localStorage.getItem(item) === null){
+    localStorage.setItem(item, "1");
+  }else{
+    itemAmount = parseInt(localStorage.getItem(item))
+
+    localStorage.setItem(item, "" + (itemAmount + 1) + "");
+
+  }
+
+}
+
+
+
+/**
+ * Calculating the Resins per Second - rate when the page was opened.
+ *
+ */
+Game.setResinPerSecondRateAtBeginning = function () {
+
+  for(var i = 0; i < items.length; i++){
+    if(localStorage.getItem(items[i].name) === null){
+      localStorage.setItem(items[i].name, "0")
+    }else{
+      // HTML element on the game page
+      var $element = $("#" + items[i].name)
+
+      // Amnount of the item
+      var itemAmount = localStorage.getItem(items[i].name)
+
+      // Writing the amount on the page at the item´s element
+      $element.children()[0].textContent = itemAmount
+
+      // Only calculate the new price if there is more than 0 items.
+      // If there are not enough items, it will just continue, and if there are,
+      // it will execute the function and continue after it as well.
+      if(itemAmount > 0) {
+        Game.setPriceAtGameBeginning($element, parseFloat(items[i].price), parseInt(itemAmount))
+      }
+
+      // Getting the data-bits-per-sec attribute, needed for calculating the Resin/sec rate
+      var bits_per_sec = $element.attr("data-bits-per-sec")
+      itemAmount = parseInt(itemAmount)
+
+      // The rate before
+      var before = ResinRate
+
+      // Calculating the rate
+      ResinRate = ResinRate + (itemAmount * bits_per_sec)
+
+      // Logging the calculation in the console
+      console.log("i = " + i + " | B/sec before: " + before.toFixed(8) +
+        " - Calculation made: " + before.toFixed(8) + " + (" + itemAmount + " * " + bits_per_sec + ") = " +  ResinRate.toFixed(8) +
+        " | New B/sec at " + ResinRate.toFixed(8))
+    }
+  }
+
+}
+
+
+
+/**
+ * Function which sets a new "Resin per Second" rate
+ *
+ * @param rate - The number which must be added to the current Resin per Second - rate
+ * @returns {Number} - Returning the new Resin per Second - rate
+ */
+Game.setNewResinRate = function (rate) {
+
+  // Logging the new Resin per second rate
+  console.log("setNewResinRate -> New rate: " + (ResinRate + rate).toFixed(8) )
+
+  // Showing the new rate on the page
+  // Rounding at specific values
+  if((ResinRate + rate) >= 1000000) {
+    $(".bSecRateNumber").text((ResinRate + rate).toFixed(0).optimizeNumber())
+  }else if((ResinRate + rate) >= 1000 ){
+    $(".bSecRateNumber").text((ResinRate + rate).toFixed(0))
+  }else if((ResinRate + rate) >= 1 ){
+    $(".bSecRateNumber").text((ResinRate + rate).toFixed(2))
+  }else{
+    $(".bSecRateNumber").text((ResinRate + rate).toFixed(8))
+  }
+
+  // Returning the new rate
+  return ResinRate = ResinRate + rate;
+
+}
+
+
+
+/**
+ * This function will check if there is any change in the localStorage,
+ * especially looking at the item amount. So it will actually calculate every price again and
+ * again. (This function should be recoded)
+ *
+ * TODO: Find a better way for setting the price after an item was bought.
+ */
+Game.setNewPrice = function()
+{
+  // for-loop for getting the price multiplier and to calculate the new price
+  for(var i = 0; i < items.length; i++){
+    if(localStorage.getItem(items[i].name) === null){
+      localStorage.setItem(items[i].name, "0")
+    }else{
+      var $element = $("#" + items[i].name)
+      var itemAmount = localStorage.getItem(items[i].name)
+
+      $element.children()[0].textContent = itemAmount
+
+      // Only calculate if there is more than 0 items
+      if(itemAmount > 0) {
+
+        // Calculation of the price
+        var multiplier = Game.GameConst.priceMultiplier
+        var calculation = (parseFloat(items[i].price) * Math.pow(multiplier, parseInt(itemAmount))).toFixed(8)
+
+        // Showing the actual price
+        $element.children()[2].textContent = calculation + ""
+
+        // Set the data-price attribute with the new price
+        $element.attr("data-price", calculation.toString())
+
+      }
+    }
+  }
+  // End of the for-loop
+}
+
+/**
+ * The function which adds new generated Resins to the current Resin amount.
+ *
+ * @param rate - The Resin per second rate; Needed for adding the generated Resins every second
+ */
+Game.bSecFunction = function (rate) {
+
+  Resins = Resins + rate
+
+  // Show both values on the page
+  // Rounding the Resin number at specific set values
+  if(Resins > 1000000){
+
+    let ResinUnitNumber = Resins.optimizeNumber()
+
+    $(".ResinAmount").text(ResinUnitNumber)
+  }else if(Resins >= 1000){
+    $(".ResinAmount").text(Resins.toFixed(0))
+  }else if(Resins >= 1){
+    $(".ResinAmount").text(Resins.toFixed(2))
+  }else{
+    $(".ResinAmount").text(Resins.toFixed(8))
+  }
+
+
+  // Rounding the satoshis amount at a specific value and optimize it for displaying on the screen.
+  var satoshis = Resins * 100000000;
+
+  if(satoshis < 1000000) {
+    $(".WorkerAmount").text(Math.round(satoshis))
+  }else{
+
+    let satoshiUnitNumber = satoshis.optimizeNumber()
+    $(".WorkerAmount").text(satoshiUnitNumber)
+  }
+
+  // Save Resin amount in the storage
+  localStorage.setItem("Resins", "" + Resins + "")
+
+  console.log("bSec -> B/sec at " + rate.toFixed(8))
+
+}
+
+/**
+ * Stops the B/sec interval.
+ */
+Game.stopBsec = function () {
+  clearInterval(bSec)
+}
+
+/**
+ * Function for optimizing the number with an unit for displaying it on the screen.
+ *
+ * @returns {string} An optimized number as a string with its unit
+ */
+Game.optimizeNumber = function () {
+  if(this >= 1e6){
+    let number = parseFloat(this)
+    let unit = Math.floor(parseFloat(number.toExponential(0).toString().replace("+", "").slice(2)) / 3) * 3
+
+    // let test = this.toExponential(0).toString().replace("+", "").slice(2)
+    // console.log(test)
+
+    var num = (this / ('1e'+(unit))).toFixed(2)
+
+    var unitname = Game.units[Math.floor(unit / 3) - 1]
+
+    return num + " " + unitname
+  }
+
+  return this.toLocaleString()
+}
+
+Number.prototype.optimizeNumber = Game.optimizeNumber
+String.prototype.optimizeNumber = Game.optimizeNumber
+
+/**
+ * Resets the game
+ */
+Game.resetGame = function () {
+  Game.stopBsec()
+  localStorage.setItem("Resins", "0")
+  localStorage.clear()
+  location.reload()
+}
+
+// --------------------------------------------------- //
+
+/**
+ * <-- Now doing everything -->
+ */
+
+
+// Calculates the Resin/sec rate with the amount of every item multiplied with their given Resins/second rate.
+Game.setResinPerSecondRateAtBeginning()
+
+// Stating the interval with the calculated Resin/second rate.
+bSec = setInterval(function () {
+  Game.bSecFunction(ResinRate);
+}, 1000)
+
+
+// Doing everything here when the game is ready to be used.
+$(document).ready(function () {
+
+  // Write the version into the .version span element
+  $(".version").text("Version " + Game.GameConst.VERSION)
+
+  // Write the Resin per second rate into the .bSecRateNumber span element
+  if(ResinRate >= 1000){
+    $(".bSecRateNumber").text(ResinRate.toFixed(0))
+  }else if(ResinRate >= 1 ){
+    $(".bSecRateNumber").text(ResinRate.toFixed(2))
+  }else{
+    $(".bSecRateNumber").text(ResinRate.toFixed(8))
+  }
+
+
+  // If clicked on the big Resin
+
+
+  // If any item from the list was clicked...
+  $(".purchaseItem").click(function () {
+document.getElementById("purchasesound").play();
+    console.log("Music.Play!Check(browser).id(0)")
+    // Get following attributes and children elements
+
+    // id of the item
+    var id = $(this).attr("id")
+
+    // The price attribute as a float number
+    var price = parseFloat($(this).attr("data-price"))
+    // The b/sec attribute from the item as a float numb pa p pm
+    
+
+    var ResinsPerSecond = parseFloat($(this).attr("data-bits-per-sec"))
+
+    // The element which shows how many of the item is existing
+    var amountDisplay = $(this).children()[0]
+    var amountDisplayAmount = parseInt(localStorage.getItem(id))
+
+    var priceDisplay = $(this).children()[2]
+
+    // If you have enough Resins, it´ll buy one item
+    if(parseFloat(Resins.toFixed(8)) >= price){
+
+      // Substract the price from the current Resin number and set it to the Resins variable.
+      Resins = parseFloat(Resins.toFixed(8)) - price
+
+      // Save the new amount of Resins in the localStorage storage
+      localStorage.setItem("Resins", "" + Resins + "")
+
+      // Changing amount number on the right of the item
+      amountDisplayAmount = amountDisplayAmount + 1
+      amountDisplay.textContent = amountDisplayAmount.toString()
+
+      // Changing the Resins amount
+      // Rounding the Resin number at specific values
+      if(Resins > 1e6){
+
+        let ResinUnitNumber = Resins.optimizeNumber()
+        $(".ResinAmount").text(ResinUnitNumber)
+
+      }else if(Resins >= 1000){
+        $(".ResinAmount").text(Resins.toFixed(0))
+      }else if(Resins >= 1){
+        $(".ResinAmount").text(Resins.toFixed(2))
+      }else{
+        $(".ResinAmount").text(Resins.toFixed(8))
+      }
+
+      // Calculation the Satoshi amount
+      if((Resins * 100000000) < 1e6) {
+        $(".WorkerAmount").text(Math.round((Resins * 100000000)))
+      }else{
+
+        let satoshiUnitNumber = (Resins * 100000000).optimizeNumber()
+        $(".WorkerAmount").text(satoshiUnitNumber)
+
+      }
+
+      // Increasing the amount of the specific item
+      Game.itemAction(id)
+
+      // Stops the interval
+      Game.stopBsec()
+
+      // Setting a new price and show it
+      Game.setNewPrice()
+
+      // Saving the new calculated Resin/second rate in a variable
+      var newRate = Game.setNewResinRate(ResinsPerSecond)
+
+      // Restarting the interval with the new rate
+      bSec = setInterval(function () {
+        Game.bSecFunction(newRate);
+      }, 1000)
+
+    }
+
+  })
+
+  //
+  // If the reset button was pressed, do following thing
+  $(".resetButton").click(function () {
+
+ 
+ 
+    Game.resetGame()
+  })
+
+});
+    </script>
+    <style>
+     .box-led {
+  background-color:#EADDCA;
+    border-radius: 15px;
+  border-color: #6F4E37;  
+     }
+     
+                     /* Animations woohoo */
+
+/* Rotation animation */
+/* Solution found on StackOverflow: https://stackoverflow.com/questions/16771225/css3-rotate-animation#16771693 */
+@keyframes rotation {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform:rotate(360deg);
+    }
+}
+
+@font-face {
+    font-family: VCR OSD Mono;
+    src: url("../fonts/VCR_OSD_MONO.ttf");
+}
+
+/* Body */
+/* Solution for disabling text selection found on StackOverflow:
+https://stackoverflow.com/questions/3779534/how-do-i-disable-text-selection-with-css-or-javascript */
+body {
+ background-color:#E1C16E	;
+}
+
+.gameFullContent{
+    width: auto;
+    display: flex;
+}
+
+/* Left Container */
+/* just a placeholder atm */
+.leftContainer{
+    width: calc(100% * 0.25);
+}
+
+.version{
+  
+}
+
+.resetButton{
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: 9%;
+    height: 4%;
+    border: 3px solid black;
+    font-size: 12pt;
+    
+    background: #ffb84c;
+    color: white;
+    cursor: pointer;
+}
+
+/* Main Container */
+/* THE Resin IMAGE */
+.mainGameContent{
+    width: calc(100% * 0.5);
+}
+
+/* Right Container */
+/* All items which you can buy */
+
+ 
+
+.ResinAmountDisplay{
+    text-align: center;
+    
+    color: white;
+    text-shadow: 1px 1px 1px black, 1px -1px 1px black, -1px 1px 1px black, -1px -1px 1px black;
+    margin: 20px 0 0 0px;
+}
+.WorkerAmountDisplay {
+    text-align: center;
+    
+    font-size: 15pt;
+    color: white;
+    text-shadow: 1px 1px 1px black, 1px -1px 1px black, -1px 1px 1px black, -1px -1px 1px black;
+    padding: 0 !important;
+    margin: 0 0 -15px 0px;
+}
+.bSecRate{
+    text-align: center;
+   
+    font-size: 13px;
+    color: white;
+    text-shadow: 1px 1px 1px black, 1px -1px 1px black, -1px 1px 1px black, -1px -1px 1px black
+}
+
+/* Resin */
+.btn-juicy.juice-big {
+	box-shadow: 10px 20px#aaa;
+}
+.btn-juicy.juice-big:hover:active {
+	box-shadow: 2px 4px#444;
+	transform: translate(10px, 20px);
+}
+.btn-juicy.juice-big:hover {
+	box-shadow: 12px 24px#b4b4b4;
+	transform: translate(-2px, -4px);
+}
+
+/* Item list */
+.purchaseList{
+    list-style-type: none;
+    font-family: "VCR OSD Mono", cursive;
+    margin: 0;
+    padding: 0;
+}
+
+/* Optimization for smaller screens */
+
+   .btn-juicy.juice-big {
+	box-shadow: 10px 20px#aaa;
+}
+.btn-juicy.juice-big:hover:active {
+	box-shadow: 2px 4px#444;
+	transform: translate(10px, 20px);
+}
+.btn-juicy.juice-big:hover {
+	box-shadow: 12px 24px#b4b4b4;
+	transform: translate(-2px, -4px);
+}
+
+.purchaseItem{
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    border-right: 3px solid white;
+    padding-left: 10px;
+    background-color:#C19A6B;
+    border-left: 3px solid white;
+}
+.attackbuttom{
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    border-right: 3px solid white;
+    padding-left: 10px;
+    background-color:#C19A6B;
+    border-left: 3px solid white;
+}
+/* Item list item */
+.attackbuttom:hover{
+    
+    background: #C19A6B(90deg, #ffe09f, #ffb84c);
+    cursor: pointer;
+}
+.purchaseItem:hover{
+    background: #C19A6B(90deg, #ffe09f, #ffb84c);
+    cursor: pointer;
+}
+.amountOfItem{
+    float: right;
+    font-size: 66pt;
+    margin-right: 15px;
+    color: rgba(0,0,0,.4);
+    margin-top: -10px;
+    margin-bottom: -50px;
+}
+.itemHeadline{
+    font-size: 20pt;
+    font-weight: bold;
+    margin-bottom: 0px;
+    margin-top: 10px;
+    color: white;
+    text-shadow: 1px 1px 1px black, 1px -1px 1px black, -1px 1px 1px black, -1px -1px 1px black;
+}
+
+ body {
+overflow-y: scroll; /* has to be scroll, not auto */
+
+   padding:0px;
+  
+  }
+ .Resin {
+    padding: 50px;
+ 
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #C19A6B;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.Resin:hover {background-color: #C19A6B}
+
+.Resin:active {
+  background-color: #C19A6B;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+    </style>
+
+<script type="text/javascript" charset="utf-8">
+
+
+// Output:
+// Hello, world!
+// Hello, world!
+// Hello, world!
+</script>
+</page>
+
+<audio id="musicgame" src="music/music.mp3" loop="loop"></audio>
+<audio id="musicgameBackUp" src="music/music.mp3" loop="loop"></audio>
+<audio id="purchasesound" src="music/purchasesound.mp3" ></audio>
+<audio id="collectSFX" src="music/collect.mp3" ></audio>
+
+<script>
+if (window.performance) {
+  console.info("window.performance works fine on this browser");
+
+}
+console.info(performance.navigation.type);
+if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
+  console.info( "This page is reloaded" );
+document.getElementById("musicgameBackUp").play();
+    console.log("Music.Play!Check(browser).id(0)");
+} else {
+  console.info( "This page is not reloaded");
+document.getElementById("musicgame").play();
+    console.log("Music.Play!Check(browser).id(0)");
+}
+</script>
+  
+  
