@@ -24,16 +24,17 @@
     <meta property="og:title" content="Termite Empire" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://klienreijioniwa.github.io/BSD/" />
-    <meta property="og:image" content="img/icon-game.png" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/KlienReijiOniwa/BSD/main/SERVER/image/Untitled%20design_20240815_194013_0000.png" />
     <meta
       property="og:description"
-      content="Create Your Termite Empire by Clicking. A Clicker game to make a termite empire. collect resin for the queen">
+      content="BSD is an online tower defense and you can grind here  exps and grind your stragety. and discover easter eggs. and more!" />
+
     <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
 </head>
 <page id="container">
 
-<body onoffline="fun()" id="container">
+<body onload="init()">
  
 
 
@@ -59,8 +60,7 @@
           <button>
     <a href="Game.html" style="color:white;">Fix Music</a>        
           </button>
-          
-            <figcaption></figcaption>
+    <figcaption></figcaption>
          
             <h2 style="color:brown;"class="ResinAmountDisplay">
               
@@ -77,8 +77,10 @@
 
 
 <center>
-	<img style="width:50px;" src="img/Termite_Queen_Sprite.png">	  
-	                                                            	  <button onclick="Resin()">Groom Queen</button></center>
+          <input id="termitename" type="text" value="Termite Queen">
+<button onclick="savenametermite()">Save Changes</button>
+	                
+	<img style="width:50px;" src="img/Termite_Queen_Sprite.png">	  	  <button onclick="Resin()">Groom Queen</button></center>
   <style>
 body {font-family:Arial, Helvetica, sans-serif;}
 
@@ -339,13 +341,22 @@ span.psw {
 
 <div id="id01" class="modal">
   <form class="modal-content animate" >
-	<h2>0 MAILS:</h2>
+	<h2>2 MAILS:</h2>
+<fieldset>
+  <h1>Winter Event</h1>
+  
+  <kbd>Ooctober 23 2024</kbd>
+  <p>Winter is Coming November 5 2024. new creature incoming and hard survival, pack some foods for your termite as winter will last a 2 months</p>
+  <p>Now is spring is getting colder. new creature incoming</p>
+<p>Huge Resin is forming. better collect them, event soon so be with your termites!</p>
+</fieldset>
 <fieldset>
   <h1>Welcome</h1>
   ,
   <kbd>Ooctober 17 2024</kbd>
   <p>10 Newbie Has Arrived Welcome!</p>
 </fieldset>
+
 </div>
   
 </div>
@@ -590,9 +601,9 @@ span.psw {
   <figure></figure>
        
 	 <fieldset class="SHOP">
-	   <h1> <img style="width:40px;"src="img/dot2024_1014_0100_05.png"></h1>
+	   <h1> <img style="width:40px;"src="img/dot2024_1014_0100_05.png">Egg Chamber</h1>
 	   
-            <p>Store eggs. by upgrading this. your worker can be collect more resin</p>
+            <p>upgrading this can upgrade your termites strengh by 1.2% and soilders. it will double per upgrade.  it can also upgrade speed by 3% to collect faster. and for soilder attack speed by 6.2% and dmg of 7.2%</p>
 	  
  <li class="purchaseItem" id="item_eggchamber" data-price="0.00003500" data-bits-per-sec="0.00000000">
 
@@ -714,17 +725,19 @@ span.psw {
   <center>
    <img style="width:100px;" src="img/Resin_page_icon.png">
    <h2>Small Resin</h2>
-   
+   <p>Collect this</p>
    <button class="attackbuttom" onclick="CollectSmallResin()">Collect</button>
    
   </center>
-<fieldset class="SHOP" hidden="">
-  <h2>Invader:Enemy Termites </h2>
-	  <p>They Are Invading your tree</p>
-	  <kbd>20 Soilder</kbd>
-	  <kbd>1 Creature</kbd>
-	 
- <li class="attackbuttom">
+<fieldset class="SHOP" id="Spider" hidden="">
+  
+  <h2><img src="img/TarantulaIcon.png">Spider</h2>
+	  <p>infesting your tree and eating some of your workers</p>
+<p>Per Attack:</p>
+<li><img class="currencyicon" src="img/Resin_page_icon.png">120 </li>
+<li><img class="currencyicon" src="img/dot2024_1015_0909_38.png">1</li>
+
+ <li class="attackbuttom" onclick="spiderAttack()">
 
 
                           
@@ -733,14 +746,60 @@ span.psw {
 
                 </li>
   
-  <kbd>1 Min Despawn</kbd>
+ 
 </fieldset>
 
 <script>
-setTimeout(myFunctionN, 200000)
-setTimeout(myFunction, 100000)
+  //ONIWASAAAAAAAACOUNTER CUMMER//
+setTimeout(SpiderSummon1, 10000)
+setTimeout(SpiderSummon0, 90000)
+//FUNCTIONS Summoner//
+function SpiderSummon0() {
+document.getElementById('Spider').style.display = "block";
+alert("Creature Spotted!");
+console.log("Spider = Mob $(spawned)");
+}
+function SpiderSummon1() {
+document.getElementById('Spider').style.display = "none";
+console.log("Noob_Hecker = Mob $(removed_0)");
+}
 
 
+
+
+
+//ATTACK//
+function spiderAttack() {
+
+    Resins = Resins + 0.00000120
+
+    // Show the new number on the page
+    if(Resins > 1000000){
+
+      let ResinUnitNumber = Resins.optimizeNumber()
+      $(".ResinAmount").text(ResinUnitNumber)
+
+    }else if(Resins >= 1000){
+      $(".ResinAmount").text(Resins.toFixed(0))
+    }else if(Resins >= 1){
+      $(".ResinAmount").text(Resins.toFixed(2))
+    }else{
+      $(".ResinAmount").text(Resins.toFixed(8))
+    }
+
+    if((Resins * 100000000) < 1000000) {
+      $(".WorkerAmount").text(Math.round((Resins * 100000000)))
+    }else{
+
+      let satoshiUnitNumber = (Resins * 100000000).optimizeNumber()
+      $(".WorkerAmount").text(satoshiUnitNumber)
+    }
+
+    alert("Attacked")
+    document.getElementById("collectSFX").play();
+}
+
+//COLLECT://
 function CollectSmallResin() {
     Resins = Resins + 0.00000010
 
@@ -1390,6 +1449,9 @@ $(document).ready(function () {
 
   // If any item from the list was clicked...
   $(".purchaseItem").click(function () {
+if (window.confirm("Purchase This Item Click >OK< to confirm"))
+  {
+  
 document.getElementById("purchasesound").play();
     console.log("Music.Play!Check(browser).id(0)")
     // Get following attributes and children elements
@@ -1466,7 +1528,14 @@ document.getElementById("purchasesound").play();
       }, 1000)
 
     }
-
+  
+}
+else
+{
+  
+  }
+  
+  
   })
 
   //
@@ -1479,9 +1548,38 @@ document.getElementById("purchasesound").play();
   })
 
 });
+
+
     </script>
-    <style>
-     .box-led {
+    <script>
+function savenametermite() {
+  if (window.confirm("Purchase This Item Click >OK< to confirm"))
+  {
+  
+document.getElementById("purchasesound").play();
+    console.log("Music.Play!Check(browser).id(0)")
+const inputValue = document.getElementById('termitename').value;
+    localStorage.setItem('savedValue', inputValue);
+}
+else
+{
+  console.log("Canceled.save.name(Server)")
+  }
+  }  
+  
+
+
+function init() {
+      const savedValue = localStorage.getItem('savedValue');
+    if (savedValue) {
+        document.getElementById('termitename').value = savedValue;
+    } else {
+        console.log("No DataFound(Server)")
+    }
+}
+    </script>
+    <Style>
+     .box-led{
   background-color:#EADDCA;
     border-radius: 15px;
   border-color: #6F4E37;  
@@ -1690,7 +1788,7 @@ overflow-y: scroll; /* has to be scroll, not auto */
 // Hello, world!
 // Hello, world!
 </script>
-</page>
+
 
 <audio id="musicgame" src="music/music.mp3" loop="loop"></audio>
 <audio id="musicgameBackUp" src="music/music.mp3" loop="loop"></audio>
@@ -1712,6 +1810,10 @@ document.getElementById("musicgameBackUp").play();
 document.getElementById("musicgame").play();
     console.log("Music.Play!Check(browser).id(0)");
 }
+
+    
+
+ 
 </script>
   
   
